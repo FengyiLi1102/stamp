@@ -12,6 +12,8 @@ void text_to_SHA1_digest(const char *text, char *digest);
 
 int leading_zeros(const char *digest);
 
-bool file_to_SHA1_digest(char *filename, char *digest);
+bool file_to_SHA1_digest(const char *filename, char *digest);
 
 bool make_header(const char *recipient, const char *filename, char *header);
+
+MessageStatus check_header(const char *email_address, const char *header, const char *filename);
